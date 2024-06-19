@@ -4098,7 +4098,7 @@
     z-index: 99;
     z-index: 99;
     width: min(100% - 2rem, 600px);
-    font-size: var(--fs-700);
+    font-size: var(--fs-600);
     opacity: 0;
     scale: 0.75;
     pointer-events: none;
@@ -4354,14 +4354,15 @@
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-000);
   font-size: var(--fs-300);
-  text-transform: uppercase;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: var(--transition-250);
   transition: var(--transition-250);
 }
 body.is-scrolled .back-top-btn {
   inset-block-end: 40px;
   opacity: 1;
+  visibility: visible;
 }
 
 /*** Home Page ***/
@@ -4463,6 +4464,17 @@ body.is-scrolled .back-top-btn {
   -webkit-padding-before: 0;
           padding-block-start: 0;
   overflow-x: hidden;
+}
+
+.live-match-banner {
+  position: relative;
+}
+.live-match-banner .play-btn {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  translate: -50% -50%;
+  color: var(--clr-primary-400);
 }
 
 .match-info {
